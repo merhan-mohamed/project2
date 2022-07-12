@@ -1,0 +1,587 @@
+*
+{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body
+{
+    font-family: "PT Sans" , "sans-serif";
+}
+
+.container
+{
+    width:80%;
+    margin:auto
+}
+
+a
+{
+    text-decoration: none;
+}
+:root
+{
+    --maincolor: #765244;
+    --subcolor:#333
+}
+
+
+/*header*/
+.header-content img
+{
+    
+    max-width: 120px;
+    margin-bottom: 10px;
+}
+
+.header-content ul
+{
+    margin: auto !important;
+}
+.header-content  ul li .nav-link
+{
+    display: block;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding: 8px 15px !important;
+    color:var(--subcolor);
+    position:relative
+}
+/*header hover*/
+/*header hover before*/
+li .nav-link:before
+{
+    content:'';
+    position: absolute;
+    border-width:0 2px;
+    border-color:var(--maincolor);
+    border-style: solid;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    transform: scale3d(1,0,1);
+    transition:0.2s   
+}
+
+li .nav-link:hover:before
+{
+    transform: scale3d(1,1,1);
+
+}
+/*end before header hover*/
+
+/*after header hover*/
+
+li .nav-link:after
+{
+    content:'';
+    position:absolute;
+    width:100%;
+    height:100%;
+    border-width:2px 0;
+    border-style:solid;
+    border-color:var(--maincolor);
+    top:0;
+    left:0;
+    transform: scale3d(0,1,1);
+    transform-origin: left;
+}
+
+li .nav-link:hover:after
+{
+    transform: scale3d(1, 1, 1);
+    transition: 0.2s;
+    transition-delay: 0.2s;
+}
+
+
+
+.header-content .login ul li
+{
+    padding:10px 10px
+}
+
+
+
+.header-content .login ul li:last-child i
+{
+    position: relative;
+    
+}
+
+.header-content .login ul li:last-child i:after
+{
+    position: absolute;
+    content:'0';
+    bottom: 0;
+    background-color: var(--subcolor);
+    right:-3px;
+    color:#fff;
+    border-radius: 50%;
+    padding: 4px;
+    font-size: 13px;
+}
+.list-unstyled
+{
+    list-style-type: none;
+}
+.dropdown-menu ul
+{
+    display: table-cell;
+    margin-right: 10px;
+    
+}
+.list-unstyled li
+{
+    margin-right: 10px;
+    text-align: center;
+}
+.list-unstyled li:first-child
+{
+    
+    border-bottom:2px dotted var(--maincolor)
+}
+/*slider*/
+
+.slider-content .carousel-indicators [data-bs-target]
+{
+    width:7px;
+    height:7px;
+    border-radius: 50%;
+}
+.carousel-control-next-icon ,
+.carousel-control-prev-icon
+{
+   
+    border: 2px solid #333;
+    background-color: gray;
+    color: #fff;
+
+}
+ .carousel-indicators .active {
+    
+    background-color: black;
+}
+/*category section*/
+.section-header
+{
+    padding-bottom: 20px;
+}
+
+.section-title
+{
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+    padding: 40px 10px 0px;
+    
+}
+
+.line
+{
+    display: block;
+    margin: auto;
+    height:3px;
+    width:100px;
+    background-color: var(--maincolor);
+    transition: width 0.5s;
+}
+.section-header:hover .line
+{
+    width:150px
+}
+/*category*/
+.category-items
+{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap:15px;
+   
+
+}
+
+.category-item .subtitle
+{
+    color:grey;
+    padding-top: 10px;
+}
+
+.titles
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.category-item i
+{
+    background-color: var(--subcolor);
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;    
+   
+}
+.icon button
+{
+    margin-right: 5px;
+}
+
+.wcarousal
+{
+    width:50px
+}
+/*discount*/
+.discount
+{
+    margin:40px 0px
+}
+
+.discount-info
+{
+    height: 100%;
+    padding: 20px
+}
+.first
+{
+   background-color:#efefef
+}
+.second,
+.third
+{
+   
+    
+    position: relative;
+    
+    
+}
+.second img,
+.third img
+{
+    transition: transform 0.3s;
+    height: 295px;
+}
+.second:hover img,
+.third:hover img
+{
+    transform: scale(1.1);
+   
+}
+.discount-info
+{
+    position: absolute;
+    top: 0;
+}
+
+
+.discount-content
+{
+    display: grid;
+    grid-template-columns: 50% auto auto;
+    grid-gap:25px;
+   
+    
+}
+.discount-content .carousel-indicators {
+   
+    margin-bottom: 0rem;
+    margin-left: 65%;
+}
+.discount-title 
+{
+    display: grid;
+    grid-template-columns: 10% 50%;
+    padding: 20px;
+    
+}
+.quote
+{
+    text-align: center;
+    padding: 10px;
+}
+.parag
+{
+    padding: 20px;
+}
+
+/*sprites*/
+.sprite-content
+{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-gap:10px;
+    text-align: center;
+}
+.sprite-item
+{
+    border-right: 4px solid #efefef;
+    
+}
+.sprite-icon 
+{
+    background-image: url(../images/service-icon.png);
+    height: 40px;
+    background-repeat: no-repeat;
+}
+.sprite-icon-1
+{
+    background-position: center 5px;
+    transition: all 0.5s;
+}
+.sprite-item:hover .sprite-icon-1
+{
+    background-position: center -86px;
+}
+.sprite-icon-2
+{
+    background-position: center -180px;
+    transition: all 0.5s;
+}
+.sprite-item:hover .sprite-icon-2
+{
+    background-position: center -273px;
+}
+.sprite-icon-3
+{
+    background-position: center -366px;
+    transition: all 0.5s;
+}
+.sprite-item:hover .sprite-icon-3
+{
+    background-position: center -455px;
+}
+.sprite-icon-4
+{
+    background-position: center -550px;
+    transition: all 0.5s;
+}
+.sprite-item:hover .sprite-icon-4
+{
+    background-position: center -639px;
+
+}
+.sprite-icon-5
+{
+    background-position: center -734px;
+    transition: all 0.5s;
+}
+.sprite-item:hover .sprite-icon-5
+{
+    background-position: center -826px;
+
+}
+.sprite-content .sprite-item:last-child
+{
+    border-right:none
+}
+/*product */
+
+.product-variety ul
+{
+    list-style-type: none;
+    text-align: center;
+}
+.product-variety ul li
+{
+    display: inline-block;
+    padding: 30px;
+}
+.product-variety ul li:hover
+{
+    color:var(--maincolor)
+}
+.products-items ul
+{
+    list-style-type: none;
+}
+.product-image
+{
+    position: relative;
+}
+.product-overlay
+{
+    position: absolute;
+    top:0;
+    left:0;
+    transform: scaleX(0);
+    transition: transform 0.2s;
+    
+}
+.product-overlay ul
+{
+    position: absolute;
+    transform:translate(-50%, -50%);
+    top:50%;
+    left:50%;
+    padding-left: 10px;
+   
+}
+.product-overlay ul li
+{
+    display: inline-block;
+    text-align: center;
+    height: 40px;
+    width:40px;
+    background-color: var(--maincolor);
+}
+.product-overlay ul li i
+{
+   color:#fff;
+   line-height: 40px;
+}
+.product-item:hover .product-overlay
+{
+    transform: scaleX(1);
+}
+.products-items
+{
+    display:grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: auto auto;
+}
+/*media query*/
+/*mobile*/
+@media(max-width:768px)
+{
+    .category-items,
+    .products-items,
+    .discount-content,
+    .sprite-conte,
+    .sprite-content
+    {
+        display: block;
+    }
+    .card
+    {
+        margin-bottom: 10px;
+    }
+    .second,
+    .third {
+        
+        margin: 20px 0px;
+    }
+  
+    .discount-title {
+        grid-template-columns: 20% 85%;
+    }
+    .quote,
+    .product-variety ul {
+        padding: 0px;
+    }
+   .product-image img
+   {
+    max-width: 100%;
+   }
+   .product-overlay ul
+   {
+    padding-left: 32px;
+   }
+   .product-variety ul li
+   {
+        display: block;
+        padding: 10px;
+   }
+   .sprite-item
+   {
+    border-right: none;
+   }
+   .product-overlay
+    {
+    right: 0;
+   }
+   .product-image img {
+    
+    display: block;
+    margin: auto;
+   }
+   .product-details-info
+   {
+    text-align: center;
+    margin: 10px 0px;
+   }
+ 
+}
+/*small screen*/
+@media(min-width:768px) and (max-width:1200px)
+{
+    .category-items,
+    .products-items,
+    .discount-content,
+    .sprite-conte,
+    .sprite-content
+    {
+        display: block;
+    }
+    
+    .card
+    {
+        margin: 10px 0px;
+        width:50%;
+        margin: auto;
+        margin-bottom: 10px;
+    }
+    .second,
+    .third 
+    {
+        
+        margin: 20px 0px;
+    }
+    .sprite-item
+   {
+    border-right: none;
+   }
+   .product-image img {
+    
+    display: block;
+    margin: auto;
+   }
+   .product-details-info
+   {
+    text-align: center;
+    margin: 10px 0px;
+   }
+   .product-overlay
+   {
+    right: 0;
+   }
+   .second img, 
+   .third img 
+   {
+    width: 50% !important;
+   }
+   .discount-info 
+   {
+    left: 230px;
+   }
+   .first {
+    
+    width: 50%;
+    margin: auto;
+   }
+   .discount-title {
+   
+    grid-template-columns: 16% 58%;
+    
+}
+.second, 
+.third {
+    
+    text-align: center;
+}
+}
+  
+
+/*medium screen*/
+@media (min-width:1200px)
+{
+    .product-image {
+        
+        margin-right: 10px;
+    }
+}
+
+
